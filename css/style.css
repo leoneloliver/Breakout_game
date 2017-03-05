@@ -10,6 +10,7 @@ canvas {
   border-left: 5px solid #f52a2a;
   border-right: 5px solid #f52a2a;
   border-top: 5px solid #f52a2a;
+  position:relative;
 }
 .credits{
   font-size: 12px;
@@ -17,4 +18,54 @@ canvas {
   text-align: center;
   font-family: verdana;
   margin-top: 50px;
+  
+}
+
+
+@-webkit-keyframes play {
+    0%   {left: 0px;}
+    25%  {left: 10px;}
+    50%  {left: 15px}
+    75%  {left: 10px}
+    100% {left: 0px;}
+  
+}
+
+@-moz-keyframes play {
+    0%   {left: 0px;}
+    25%  {left: 10px;}
+    50%  {left: 15px}
+    75%  {left: 10px}
+    100% {left: 0px;}
+}
+
+@-ms-keyframes play {
+    0%   {left: 0px;}
+    25%  {left: 10px;}
+    50%  {left: 15px}
+    75%  {left: 10px}
+    100% {left: 0px;}
+}
+
+@-o-keyframes play {
+    0%   {left: 0px;}
+    25%  {left: 10px;}
+    50%  {left: 15px}
+    75%  {left: 10px}
+    100% {left: 0px;}
+}
+
+@keyframes play {
+    0%   {left: 0px;}
+    25%  {left: 10px;}
+    50%  {left: 15px}
+    75%  {left: 10px}
+    100% {left: 0px;}
+}
+.shake{
+    -webkit-animation: play .3s steps(10) infinite;
+       -moz-animation: play .3s steps(10) infinite;
+        -ms-animation: play .3s steps(10) infinite;
+         -o-animation: play .3s steps(10) infinite;
+            animation: play .3s steps(10) infinite;
 }
