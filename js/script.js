@@ -72,6 +72,8 @@ function collisionDetection() {
                        paddleWidth = 100;
                        paddleColor = '#ccc';
                        
+                    }else if(score == 39){
+                       canvas.classList.add('shake');
                     }
                     if(score == brickRowCount*brickColumnCount) {
                         alert("YOU WIN, CONGRATS!");
@@ -150,9 +152,11 @@ function draw() {
     
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
+        playSound('sound-wall');
     }
     if(y + dy < ballRadius) {
         dy = -dy;
+        playSound('sound-wall');
     }
     else if(y + dy > canvas.height-ballRadius) {
         if(x > paddleX && x < paddleX + paddleWidth) {
@@ -207,9 +211,5 @@ function playSound(sound){
   audio.currentTime = 0;
   audio.play();
 }
-
-
-
-
 
 canvas.addEventListener('mousedown', handleMouseClick);
